@@ -5,6 +5,7 @@
 #./venv/Scripts/activate
 #pip install Django==3.2.2
 #python -m pip install Pillow
+#python manage.py createsuperuser
 #python manage.py makemigrations
 #python manage.py migrate
 #python manage.py runserver
