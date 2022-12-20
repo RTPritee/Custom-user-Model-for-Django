@@ -9,3 +9,6 @@
 #python manage.py makemigrations
 #python manage.py migrate
 #python manage.py runserver
+-------------------------
+#create app:
+#python manage.py startapp user_account
