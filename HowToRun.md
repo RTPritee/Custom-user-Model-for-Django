@@ -14,5 +14,10 @@
 #python manage.py startapp user_account
 
 -------------------------
-Module error:
+#Module error:
 #pip install django-bootstrap-modal-forms
+
+-------------------------
+
+#requirement.txt install:
+#pip install -r requirements.txt 
