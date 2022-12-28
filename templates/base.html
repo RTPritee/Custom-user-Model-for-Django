@@ -2,23 +2,49 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard</title>
+    <!-- Google Font: Source Sans Pro -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    /> -->
+    <!-- Font Awesome -->
+    <!-- <link
+      rel="stylesheet"
+      href="{% static 'plugins/fontawesome-free/css/all.min.css' %}"
+    /> -->
+    <!-- Theme style -->
+    <!-- <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}" /> -->
+    <!-- Latest compiled and minified CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Admin Dashboard</title>
-   <!-- Google Font: Source Sans Pro -->
-   <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-   <!-- Font Awesome -->
-   <link rel="stylesheet" href="{% static 'plugins/fontawesome-free/css/all.min.css' %}">
-   <!-- Theme style -->
-   <link rel="stylesheet" href="{% static 'dist/css/adminlte.min.css' %}">
-</head>
-
-<body class="hold-transition sidebar-mini layout-navbar-fixed">
-   <!-- Site wrapper -->
-   <div class="wrapper">
+  <body class="hold-transition sidebar-mini layout-navbar-fixed">
+    <!-- Site wrapper -->
+    <div class="wrapper">
       <!-- Navbar -->
       {% include 'includes/top-navbar.html' %}
       <!-- /.navbar -->
@@ -27,85 +53,88 @@
       <!-- /.Main Sidebar Container -->
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
-         <!-- Content Header (Page header) -->
-         <section class="content-header">
-            <div class="container-fluid">
-               <div class="row mb-2">
-                  <div class="col-sm-6">
-                     <h1>
-                        {% block page_title %}
-                        Dashboard
-                        {% endblock %}
-                     </h1>
-                  </div>
-               </div>
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1>{% block page_title %} Dashboard {% endblock %}</h1>
+              </div>
             </div>
-            <!-- /.container-fluid -->
-         </section>
-         <!-- Main content -->
-         <section class="content">
-            <div class="container-fluid">
-               {% block content %}
-               <div class="row">
-                  <div class="col-12">
-                     <!-- Default box -->
-                     <div class="card">
-                        <div class="card-header">
-                           <h3 class="card-title">CRM</h3>
-                           <div class="card-tools">
-                              <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                 <i class="fas fa-minus"></i>
-                              </button>
-                              <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-                                 <i class="fas fa-times"></i>
-                              </button>
-                           </div>
-                        </div>
-                        <div class="card-body">
-                           content
-                           <!-- <div class="content-wrapper">
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            {% block content %}
+            <div class="row">
+              <div class="col-12">
+                <!-- Default box -->
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">CRM</h3>
+                    <div class="card-tools">
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-card-widget="collapse"
+                        title="Collapse"
+                      >
+                        <i class="fas fa-minus"></i>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn btn-tool"
+                        data-card-widget="remove"
+                        title="Remove"
+                      >
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    content
+                    <!-- <div class="content-wrapper">
                                  content
                            </div> -->
-                        </div>
-                        <!-- /.card-body -->
-                        
-                        <!-- <div class="card-footer">
+                  </div>
+                  <!-- /.card-body -->
+
+                  <!-- <div class="card-footer">
                               Footer
                            </div> -->
-                        <!-- /.card-footer-->
-                     </div>
-                     <!-- /.card -->
-                  </div>
-               </div>
-               {% endblock %}
+                  <!-- /.card-footer-->
+                </div>
+                <!-- /.card -->
+              </div>
             </div>
-           
-         </section>
-         <!-- /.content -->
+            {% endblock %}
+          </div>
+        </section>
+        <!-- /.content -->
       </div>
       <!-- /.content-wrapper -->
       <footer class="main-footer">
-         <div class="float-right d-none d-sm-block">
-            <b>Version</b> 3.1.0
-         </div>
-         <strong>Copyright &copy; Pritee <a href=""></a>.</strong> All rights reserved.
+        <div class="float-right d-none d-sm-block"><b>Version</b> 3.1.0</div>
+        <strong>Copyright &copy; Pritee <a href=""></a>.</strong> All rights
+        reserved.
       </footer>
       <!-- Control Sidebar -->
       <aside class="control-sidebar control-sidebar-dark">
-         <!-- Control sidebar content goes here -->
+        <!-- Control sidebar content goes here -->
       </aside>
       <!-- /.control-sidebar -->
-   </div>
+    </div>
 
-   <!-- ./wrapper -->
-   <!-- jQuery -->
-   <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
-   <!-- Bootstrap 4 -->
-   <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-   <!-- AdminLTE App -->
-   <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
-   <!-- AdminLTE for demo purposes -->
-   <script src=" {% static 'dist/js/demo.js' %}"></script>
-</body>
-
+    <!-- ./wrapper -->
+    <!-- jQuery -->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- AdminLTE App -->
+    <script src="{% static 'dist/js/adminlte.min.js' %}"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src=" {% static 'dist/js/demo.js' %}"></script>
+  </body>
 </html>

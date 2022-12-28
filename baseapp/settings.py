@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_4d5u-q)mta5ap9xr#9rf=8lxx$*)jk04bkfy0q8p8u^ur112-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True 
 
 ALLOWED_HOSTS = ['*']
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap_modal_forms',
 ]
 
 MIDDLEWARE = [
@@ -119,14 +120,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'static/media')
+# STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 # STATICFILES_DIRS = [
 #    os.path.join(BASE_DIR, 'static/')
 # ]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'account/uploads/')
-MEDIA_URL = 'admin/account/uploads/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'account/uploads/')
+# MEDIA_URL = 'admin/account/uploads/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
