@@ -14,6 +14,7 @@
 #python manage.py migrate
 -------------------------
 #python manage.py runserver
+#py manage.py runserver --insecure [this is for when debug is false]
 -------------------------
 #create app:
 #python manage.py startapp user_account
